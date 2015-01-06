@@ -184,9 +184,12 @@ namespace SpaceMaze
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		protected override void Update (GameTime gameTime)
 		{
+			//System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch ();
+			//sw.Start ();
 			base.Update (gameTime);
 			UpdateInput ();
 			UpdateScreen (gameTime);
+			//Console.WriteLine ("Update: " + sw.ElapsedMilliseconds);
 		}
 
 		/// <summary>
@@ -195,6 +198,8 @@ namespace SpaceMaze
 		/// <param name="gameTime">Provides a snapshot of timing values.</param>
 		protected override void Draw (GameTime gameTime)
 		{
+			//System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch ();
+			//sw.Start ();
 			base.Draw (gameTime);
 			if (graphics.PreferredBackBufferWidth != GraphicsDevice.Viewport.Width ||
 			    graphics.PreferredBackBufferHeight != GraphicsDevice.Viewport.Height) {
@@ -218,6 +223,8 @@ namespace SpaceMaze
 			spriteBatch.Begin ();
 			currentScreen.DrawUnscaled ();
 			spriteBatch.End ();
+
+			//Console.WriteLine ("Draw: " + sw.ElapsedMilliseconds);
 		}
 
 		#endregion
