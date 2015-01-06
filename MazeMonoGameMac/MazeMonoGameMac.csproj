@@ -4,11 +4,11 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{948B3504-5B70-4649-8FE4-BDE1FB46EC69};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{21BE4A65-A287-4BCB-9F4C-19C1E00B746A}</ProjectGuid>
+    <ProjectGuid>{656BC817-3CA0-4FB2-9BEC-F654B9C9671A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SpaceMaze</RootNamespace>
+    <RootNamespace>MazeMonoGameMac</RootNamespace>
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
-    <AssemblyName>SpaceMaze</AssemblyName>
+    <AssemblyName>MazeMonoGameMac</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -63,13 +63,16 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="MonoMac">
-      <HintPath>packages\MonoMac.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoGame.Framework">
-      <HintPath>packages\MonoGame.Framework.dll</HintPath>
+      <HintPath>..\MazeMonoGameBase\packages\MonoMac.dll</HintPath>
     </Reference>
     <Reference Include="Lidgren.Network">
-      <HintPath>packages\Lidgren.Network.dll</HintPath>
+      <HintPath>..\Dependencies\MacOS\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>..\Dependencies\MacOS\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework.Net">
+      <HintPath>..\Dependencies\MacOS\MonoGame.Framework.Net.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -80,21 +83,21 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpaceGame.cs" />
-    <Compile Include="Screen.cs" />
-    <Compile Include="Drawable.cs" />
-    <Compile Include="GameScreen.cs" />
-    <Compile Include="Utils.cs" />
-    <Compile Include="GameObject.cs" />
-    <Compile Include="PhysicalObject.cs" />
-    <Compile Include="Maze.cs" />
-    <Compile Include="GameState.cs" />
+  </ItemGroup>
+  <Import Project="..\Shared\Shared.projitems" Label="Shared" Condition="Exists('..\Shared\Shared.projitems')" />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Assets\logo.png" />
-    <BundleResource Include="Assets\cursor.png" />
-    <BundleResource Include="Assets\gg.png" />
+    <BundleResource Include="..\MazeMonoGameBase\Assets\cursor.png">
+      <Link>Assets\cursor.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MazeMonoGameBase\Assets\gg.png">
+      <Link>Assets\gg.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\MazeMonoGameBase\Assets\logo.png">
+      <Link>Assets\logo.png</Link>
+    </BundleResource>
   </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
