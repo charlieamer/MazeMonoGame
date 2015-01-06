@@ -109,7 +109,6 @@ namespace SpaceMaze
 		/// </summary>
 		protected override void LoadContent ()
 		{
-			Console.WriteLine ("LoadContent");
 			physicalSize = new Vector2 (GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
 			gameSize = physicalSize;
 

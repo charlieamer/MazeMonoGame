@@ -120,7 +120,7 @@ namespace SpaceMaze
 			return false;
 		}
 
-		#if DEBUG
+		#if DEBUG_VISUALISATION
 		public override void Draw ()
 		{
 			base.Draw ();
