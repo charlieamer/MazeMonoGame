@@ -43,7 +43,7 @@ namespace SpaceMaze
 			AppendChild (targetObject);
 
 			testObject = new PhysicalObject (Utils.CreateCircle (10));
-			testObject.maxSpeed = 4.0f;
+			testObject.maxSpeed = 5.5f;
 			AppendChild (testObject);
 
 			maze = new Maze ("gg.png");
@@ -111,7 +111,7 @@ namespace SpaceMaze
 		protected void UpdatePlaying()
 		{
 			base.Update ();
-			testObject.ModifyForce ("target", targetObject.position - testObject.position, 0.1f);
+			testObject.ModifyForce ("target", targetObject.position - testObject.position, 0.2f);
 			if (maze.CanCollide (testObject))
 				gameState = GameState.Losing;
 		}

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazeMonoGameMac", "MazeMonoGameMac\MazeMonoGameMac.csproj", "{656BC817-3CA0-4FB2-9BEC-F654B9C9671A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazeMonoGameAndroid", "MazeMonoGameAndroid\MazeMonoGameAndroid.csproj", "{8E40AF83-D9E9-48A8-8BF4-43A0358C8EE5}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Shared", "Shared\Shared.shproj", "{C62DC74F-2E1D-497E-9138-3CF24A10112A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazeMonoGameAndroid", "MazeMonoGameAndroid\MazeMonoGameAndroid.csproj", "{F615D18E-A7B9-4FA6-B019-B7D8D84DC6CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,14 +20,14 @@ Global
 		{656BC817-3CA0-4FB2-9BEC-F654B9C9671A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{656BC817-3CA0-4FB2-9BEC-F654B9C9671A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{656BC817-3CA0-4FB2-9BEC-F654B9C9671A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8E40AF83-D9E9-48A8-8BF4-43A0358C8EE5}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
-		{8E40AF83-D9E9-48A8-8BF4-43A0358C8EE5}.AppStore|Any CPU.Build.0 = Release|Any CPU
-		{8E40AF83-D9E9-48A8-8BF4-43A0358C8EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8E40AF83-D9E9-48A8-8BF4-43A0358C8EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8E40AF83-D9E9-48A8-8BF4-43A0358C8EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8E40AF83-D9E9-48A8-8BF4-43A0358C8EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F615D18E-A7B9-4FA6-B019-B7D8D84DC6CA}.AppStore|Any CPU.ActiveCfg = Release|Any CPU
+		{F615D18E-A7B9-4FA6-B019-B7D8D84DC6CA}.AppStore|Any CPU.Build.0 = Release|Any CPU
+		{F615D18E-A7B9-4FA6-B019-B7D8D84DC6CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F615D18E-A7B9-4FA6-B019-B7D8D84DC6CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F615D18E-A7B9-4FA6-B019-B7D8D84DC6CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F615D18E-A7B9-4FA6-B019-B7D8D84DC6CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = MazeMonoGameMac\MazeMonoGameMac.csproj
+		StartupItem = MazeMonoGameAndroid\MazeMonoGameAndroid.csproj
 	EndGlobalSection
 EndGlobal

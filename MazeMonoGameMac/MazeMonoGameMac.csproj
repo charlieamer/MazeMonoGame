@@ -9,6 +9,7 @@
     <RootNamespace>MazeMonoGameMac</RootNamespace>
     <MonoMacResourcePrefix>Resources</MonoMacResourcePrefix>
     <AssemblyName>MazeMonoGameMac</AssemblyName>
+    <SuppressXamMacUpsell>True</SuppressXamMacUpsell>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -90,13 +91,13 @@
     <Folder Include="Assets\" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="..\MazeMonoGameBase\Assets\cursor.png">
+    <BundleResource Include="..\Shared\Assets\cursor.png">
       <Link>Assets\cursor.png</Link>
     </BundleResource>
-    <BundleResource Include="..\MazeMonoGameBase\Assets\gg.png">
+    <BundleResource Include="..\Shared\Assets\gg.png">
       <Link>Assets\gg.png</Link>
     </BundleResource>
-    <BundleResource Include="..\MazeMonoGameBase\Assets\logo.png">
+    <BundleResource Include="..\Shared\Assets\logo.png">
       <Link>Assets\logo.png</Link>
     </BundleResource>
   </ItemGroup>

@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{8E40AF83-D9E9-48A8-8BF4-43A0358C8EE5}</ProjectGuid>
+    <ProjectGuid>{F615D18E-A7B9-4FA6-B019-B7D8D84DC6CA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>MazeMonoGameAndroid</RootNamespace>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
@@ -43,14 +43,14 @@
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
     <Reference Include="OpenTK" />
+    <Reference Include="MonoGame.Framework.Net">
+      <HintPath>..\Dependencies\Android\MonoGame.Framework.Net.dll</HintPath>
+    </Reference>
     <Reference Include="MonoGame.Framework">
       <HintPath>packages\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="Lidgren.Network">
-      <HintPath>..\Dependencies\Android\Lidgren.Network.dll</HintPath>
-    </Reference>
-    <Reference Include="MonoGame.Framework.Net">
-      <HintPath>..\Dependencies\Android\MonoGame.Framework.Net.dll</HintPath>
+      <HintPath>packages\Lidgren.Network.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
-    <Compile Include="GameActivity.cs" />
+    <Compile Include="MazeGameActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\Icon.png" />
@@ -71,7 +71,19 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\Content\logo.png" />
     <AndroidAsset Include="Assets\AboutAssets.txt" />
+    <AndroidAsset Include="..\Shared\Assets\cursor.png">
+      <Link>Assets\Assets\cursor.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Shared\Assets\gg.png">
+      <Link>Assets\Assets\gg.png</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\Shared\Assets\logo.png">
+      <Link>Assets\Assets\logo.png</Link>
+    </AndroidAsset>
   </ItemGroup>
   <Import Project="..\Shared\Shared.projitems" Label="Shared" Condition="Exists('..\Shared\Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Assets\Assets\" />
+  </ItemGroup>
 </Project>

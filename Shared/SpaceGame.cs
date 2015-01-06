@@ -28,7 +28,6 @@ namespace SpaceMaze
 	/// </summary>
 	public class SpaceGame : Game
 	{
-
 		public static SpaceGame singleton { get; protected set; }
 
 		#region Fields
@@ -37,6 +36,8 @@ namespace SpaceMaze
 		MouseState currentMouse, oldMouse;
 		public SpriteBatch spriteBatch { get; protected set; }
 		Screen currentScreen;
+		TouchCollection currentTouch, oldTouch;
+		private int touchFollowId;
 
 		#endregion
 
@@ -98,6 +99,8 @@ namespace SpaceMaze
 		{
 			base.Initialize ();
 			oldMouse = Mouse.GetState ();
+			oldTouch = TouchPanel.GetState ();
+			touchFollowId = -1;
 		}
 
 
@@ -106,6 +109,7 @@ namespace SpaceMaze
 		/// </summary>
 		protected override void LoadContent ()
 		{
+			Console.WriteLine ("LoadContent");
 			physicalSize = new Vector2 (GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
 			gameSize = physicalSize;
 
@@ -146,6 +150,31 @@ namespace SpaceMaze
 			}
 
 			oldMouse = currentMouse;
+
+			currentTouch = TouchPanel.GetState ();
+
+			if (currentTouch.Count == 0)
+				touchFollowId = -1;
+
+			if (currentTouch.Count > 0 && touchFollowId == -1) {
+				touchFollowId = currentTouch [0].Id;
+				currentScreen.OnTouch (new Point ((int)currentTouch [0].Position.X, (int)currentTouch [0].Position.Y));
+			}
+
+			TouchLocation currentTouchLocation;
+			if (currentTouch.FindById (touchFollowId, out currentTouchLocation)) {
+				TouchLocation oldTouchLocation;
+				if (currentTouchLocation.TryGetPreviousLocation (out oldTouchLocation)) {
+					if (currentTouchLocation.Position != oldTouchLocation.Position)
+						currentScreen.OnTouchMove (new Point ((int)currentTouchLocation.Position.X, (int)currentTouchLocation.Position.Y));
+				}
+			}
+
+			if (!currentTouch.FindById (touchFollowId, out currentTouchLocation) && oldTouch.FindById (touchFollowId, out currentTouchLocation)) {
+				currentScreen.OnTouchUp (new Point ((int)currentTouchLocation.Position.X, (int)currentTouchLocation.Position.Y));
+			}
+
+			oldTouch = currentTouch;
 		}
 
 		/// <summary>
@@ -167,6 +196,19 @@ namespace SpaceMaze
 		protected override void Draw (GameTime gameTime)
 		{
 			base.Draw (gameTime);
+			if (graphics.PreferredBackBufferWidth != GraphicsDevice.Viewport.Width ||
+			    graphics.PreferredBackBufferHeight != GraphicsDevice.Viewport.Height) {
+				graphics.PreferredBackBufferWidth = GraphicsDevice.Viewport.Width;
+				graphics.PreferredBackBufferHeight = GraphicsDevice.Viewport.Height;
+				graphics.ApplyChanges ();
+			}
+			if (GraphicsDevice.Viewport.Width != physicalSize.X || GraphicsDevice.Viewport.Height != physicalSize.Y) {
+				physicalSize = new Vector2 (GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+				gameSize = _gameSize;
+			}
+			/* Console.WriteLine (physicalSize.X + "x" + physicalSize.Y + " - " +
+				GraphicsDevice.Viewport.Width + "x" + GraphicsDevice.Viewport.Height + " - " +
+				graphics.PreferredBackBufferWidth + "x" + graphics.PreferredBackBufferHeight); */
 			graphics.GraphicsDevice.Clear (Color.CornflowerBlue);
 
 			spriteBatch.Begin(SpriteSortMode.BackToFront, null, null, null, null, null, matrix);

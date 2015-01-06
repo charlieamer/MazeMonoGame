@@ -47,7 +47,9 @@ namespace SpaceMaze
 		private void InitMouse()
 		{
 			cursor = new GameObject ("cursor.png");
+			#if !__MOBILE__
 			AppendChild (cursor);
+			#endif
 			cursor.center = new Vector2 (0, 2);
 			cursor.scale = new Vector2 (0.4f, 0.4f);
 			cursor.isUnscaled = true;
