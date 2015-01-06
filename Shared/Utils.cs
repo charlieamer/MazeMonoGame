@@ -17,7 +17,7 @@ namespace SpaceMaze
 {
 	class Utils
 	{
-		public static Texture2D CreateCircle(int radius)
+		public static Texture2D CreateCircle(int radius, Color color)
 		{
 			int outerRadius = radius*2 + 2; // So circle doesn't go out of bounds
 			Texture2D texture = new Texture2D(SpaceGame.singleton.spriteBatch.GraphicsDevice, outerRadius, outerRadius);
@@ -43,14 +43,19 @@ namespace SpaceMaze
 			texture.SetData(data);
 			return texture;
 		}
-		public static Texture2D CreateRectangle( int width, int height ) {
+
+		public static Texture2D CreateCircle(int radius) {
+			return CreateCircle (radius, Color.White);
+		}
+
+		public static Texture2D CreateRectangle( int width, int height, Color color) {
 			Texture2D texture = new Texture2D(SpaceGame.singleton.spriteBatch.GraphicsDevice, width, height);
 			Color[] colors = new Color[ width * height ];
 
 			for ( int x = 0; x < texture.Width; x++ ) {
 				for ( int y = 0; y < texture.Height; y++ ) {
 					if ( x == 0 || y == 0 || x == texture.Width - 1 || y == texture.Height - 1 ) {
-						colors[x + y * texture.Width] = Color.White;
+						colors[x + y * texture.Width] = color;
 					} else
 						colors[ x + y * texture.Width ] = Color.TransparentBlack;
 				}
@@ -58,6 +63,10 @@ namespace SpaceMaze
 
 			texture.SetData( colors );
 			return texture;
+		}
+
+		public static Texture2D CreateRectangle(int width, int height) {
+			return CreateRectangle (width, height, Color.White);
 		}
 	}
 }

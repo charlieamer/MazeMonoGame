@@ -216,7 +216,7 @@ namespace SpaceMaze
 				graphics.PreferredBackBufferWidth + "x" + graphics.PreferredBackBufferHeight); */
 			graphics.GraphicsDevice.Clear (Color.CornflowerBlue);
 
-			spriteBatch.Begin(SpriteSortMode.BackToFront, null, null, null, null, null, matrix);
+			spriteBatch.Begin(SpriteSortMode.Immediate, null, null, null, null, null, matrix);
 			currentScreen.Draw();
 			spriteBatch.End ();
 

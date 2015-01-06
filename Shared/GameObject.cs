@@ -24,7 +24,7 @@ namespace SpaceMaze
 		public float rotation { get; set; }
 		public Rectangle bounds {
 			get {
-				return new Rectangle ((int)position.X - texture.Width / 2, (int)position.Y - texture.Height / 2, texture.Width, texture.Height);
+				return new Rectangle ((int)position.X - (int)center.X, (int)position.Y - (int)center.Y, texture.Width, texture.Height);
 			}
 		}
 		#endregion

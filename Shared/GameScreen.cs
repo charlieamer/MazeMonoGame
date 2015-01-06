@@ -110,10 +110,10 @@ namespace SpaceMaze
 
 		protected void UpdatePlaying()
 		{
-			base.Update ();
 			testObject.ModifyForce ("target", targetObject.position - testObject.position, 0.2f);
 			if (maze.CanCollide (testObject))
 				gameState = GameState.Losing;
+			base.Update ();
 		}
 
 		protected void Lost ()
