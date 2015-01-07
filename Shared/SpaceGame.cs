@@ -86,7 +86,9 @@ namespace SpaceMaze
 			
 			Content.RootDirectory = "Assets";
 
-			graphics.IsFullScreen = false;
+			graphics.IsFullScreen = true;
+			graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
+			graphics.ApplyChanges ();
 
 			singleton = this;
 		}
@@ -200,12 +202,14 @@ namespace SpaceMaze
 			//System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch ();
 			//sw.Start ();
 			base.Draw (gameTime);
-			if (graphics.PreferredBackBufferWidth != GraphicsDevice.Viewport.Width ||
-			    graphics.PreferredBackBufferHeight != GraphicsDevice.Viewport.Height) {
-				graphics.PreferredBackBufferWidth = GraphicsDevice.Viewport.Width;
-				graphics.PreferredBackBufferHeight = GraphicsDevice.Viewport.Height;
+			/*
+			if (graphics.PreferredBackBufferWidth != GraphicsDevice.Viewport.Height ||
+				graphics.PreferredBackBufferHeight != GraphicsDevice.Viewport.Width) {
+				graphics.PreferredBackBufferWidth = GraphicsDevice.Viewport.Height;
+				graphics.PreferredBackBufferHeight = GraphicsDevice.Viewport.Width;
 				graphics.ApplyChanges ();
 			}
+			*/
 			if (GraphicsDevice.Viewport.Width != physicalSize.X || GraphicsDevice.Viewport.Height != physicalSize.Y) {
 				physicalSize = new Vector2 (GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
 				gameSize = _gameSize;
