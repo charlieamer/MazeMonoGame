@@ -46,11 +46,9 @@ namespace SpaceMaze
 		}
 
 		private List<Point> getOctree(int x, int y) {
-			try {
-				return octreeCollidables [x / OCTREE_SIZE, y / OCTREE_SIZE];
-			} catch {
+			if (x < 0 || y < 0 || x >= texture.Width || y >= texture.Height)
 				return null;
-			}
+			return octreeCollidables [x / OCTREE_SIZE, y / OCTREE_SIZE];
 		}
 
 		private List<Point> getOrCreateOctree(int x, int y) {
@@ -77,7 +75,7 @@ namespace SpaceMaze
 		{
 			base.LoadContent ();
 
-			octreeCollidables = new List<Point>[texture.Width / OCTREE_SIZE, texture.Height / OCTREE_SIZE];
+			octreeCollidables = new List<Point>[texture.Width / OCTREE_SIZE + 1, texture.Height / OCTREE_SIZE + 1];
 			colors = new Color[texture.Width * texture.Height];
 			texture.GetData<Color> (colors);
 			for (int x = 0; x < texture.Width; x++) {
