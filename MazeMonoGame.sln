@@ -36,6 +36,6 @@ Global
 		{F615D18E-A7B9-4FA6-B019-B7D8D84DC6CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = MazeMonoGameWindows\MazeMonoGameWindows.csproj
+		StartupItem = MazeMonoGameMac\MazeMonoGameMac.csproj
 	EndGlobalSection
 EndGlobal

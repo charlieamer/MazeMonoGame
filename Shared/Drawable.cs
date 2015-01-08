@@ -66,10 +66,19 @@ namespace SpaceMaze
 			return SpaceGame.singleton.Content.Load<Texture2D> (name);
 		}
 
+		protected SpriteFont LoadFont(String name)
+		{
+			return SpaceGame.singleton.Content.Load<SpriteFont> (name);
+		}
+
 		protected void AppendChild(Drawable child) {
 			children.Add(child);
 			if (contentLoaded)
 				child.LoadContent();
+		}
+
+		protected void PrependChild(Drawable child) {
+			children.Insert (0, child);
 		}
 
 		protected void RemoveChild(Drawable child) {

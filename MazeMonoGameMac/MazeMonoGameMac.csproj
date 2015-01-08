@@ -73,9 +73,15 @@
     <Reference Include="MonoGame.Framework.Net">
       <HintPath>..\Dependencies\MacOS\MonoGame.Framework.Net.dll</HintPath>
     </Reference>
+    <Reference Include="MonoGame.Framework.Content.Pipeline">
+      <HintPath>..\Dependencies\MacOS\MonoGame.Framework.Content.Pipeline.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
+    <None Include="..\Shared\Assets\Font.xnb">
+      <Link>Assets\Font.xnb</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -92,5 +98,767 @@
     <BundleResource Include="..\Shared\Assets\logo.png">
       <Link>Assets\logo.png</Link>
     </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\1.png">
+      <Link>Assets\Roboto-Regular\1.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\10.png">
+      <Link>Assets\Roboto-Regular\10.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\100.png">
+      <Link>Assets\Roboto-Regular\100.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\101.png">
+      <Link>Assets\Roboto-Regular\101.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\102.png">
+      <Link>Assets\Roboto-Regular\102.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\103.png">
+      <Link>Assets\Roboto-Regular\103.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\104.png">
+      <Link>Assets\Roboto-Regular\104.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\105.png">
+      <Link>Assets\Roboto-Regular\105.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\106.png">
+      <Link>Assets\Roboto-Regular\106.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\107.png">
+      <Link>Assets\Roboto-Regular\107.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\108.png">
+      <Link>Assets\Roboto-Regular\108.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\109.png">
+      <Link>Assets\Roboto-Regular\109.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\11.png">
+      <Link>Assets\Roboto-Regular\11.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\110.png">
+      <Link>Assets\Roboto-Regular\110.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\111.png">
+      <Link>Assets\Roboto-Regular\111.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\112.png">
+      <Link>Assets\Roboto-Regular\112.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\113.png">
+      <Link>Assets\Roboto-Regular\113.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\114.png">
+      <Link>Assets\Roboto-Regular\114.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\115.png">
+      <Link>Assets\Roboto-Regular\115.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\116.png">
+      <Link>Assets\Roboto-Regular\116.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\117.png">
+      <Link>Assets\Roboto-Regular\117.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\118.png">
+      <Link>Assets\Roboto-Regular\118.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\119.png">
+      <Link>Assets\Roboto-Regular\119.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\12.png">
+      <Link>Assets\Roboto-Regular\12.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\120.png">
+      <Link>Assets\Roboto-Regular\120.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\121.png">
+      <Link>Assets\Roboto-Regular\121.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\122.png">
+      <Link>Assets\Roboto-Regular\122.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\123.png">
+      <Link>Assets\Roboto-Regular\123.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\124.png">
+      <Link>Assets\Roboto-Regular\124.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\125.png">
+      <Link>Assets\Roboto-Regular\125.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\126.png">
+      <Link>Assets\Roboto-Regular\126.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\127.png">
+      <Link>Assets\Roboto-Regular\127.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\128.png">
+      <Link>Assets\Roboto-Regular\128.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\129.png">
+      <Link>Assets\Roboto-Regular\129.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\13.png">
+      <Link>Assets\Roboto-Regular\13.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\130.png">
+      <Link>Assets\Roboto-Regular\130.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\131.png">
+      <Link>Assets\Roboto-Regular\131.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\132.png">
+      <Link>Assets\Roboto-Regular\132.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\133.png">
+      <Link>Assets\Roboto-Regular\133.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\134.png">
+      <Link>Assets\Roboto-Regular\134.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\135.png">
+      <Link>Assets\Roboto-Regular\135.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\136.png">
+      <Link>Assets\Roboto-Regular\136.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\137.png">
+      <Link>Assets\Roboto-Regular\137.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\138.png">
+      <Link>Assets\Roboto-Regular\138.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\139.png">
+      <Link>Assets\Roboto-Regular\139.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\14.png">
+      <Link>Assets\Roboto-Regular\14.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\140.png">
+      <Link>Assets\Roboto-Regular\140.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\141.png">
+      <Link>Assets\Roboto-Regular\141.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\142.png">
+      <Link>Assets\Roboto-Regular\142.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\143.png">
+      <Link>Assets\Roboto-Regular\143.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\144.png">
+      <Link>Assets\Roboto-Regular\144.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\145.png">
+      <Link>Assets\Roboto-Regular\145.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\146.png">
+      <Link>Assets\Roboto-Regular\146.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\147.png">
+      <Link>Assets\Roboto-Regular\147.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\148.png">
+      <Link>Assets\Roboto-Regular\148.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\149.png">
+      <Link>Assets\Roboto-Regular\149.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\15.png">
+      <Link>Assets\Roboto-Regular\15.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\150.png">
+      <Link>Assets\Roboto-Regular\150.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\151.png">
+      <Link>Assets\Roboto-Regular\151.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\152.png">
+      <Link>Assets\Roboto-Regular\152.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\153.png">
+      <Link>Assets\Roboto-Regular\153.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\154.png">
+      <Link>Assets\Roboto-Regular\154.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\155.png">
+      <Link>Assets\Roboto-Regular\155.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\156.png">
+      <Link>Assets\Roboto-Regular\156.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\157.png">
+      <Link>Assets\Roboto-Regular\157.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\158.png">
+      <Link>Assets\Roboto-Regular\158.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\159.png">
+      <Link>Assets\Roboto-Regular\159.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\16.png">
+      <Link>Assets\Roboto-Regular\16.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\160.png">
+      <Link>Assets\Roboto-Regular\160.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\161.png">
+      <Link>Assets\Roboto-Regular\161.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\162.png">
+      <Link>Assets\Roboto-Regular\162.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\163.png">
+      <Link>Assets\Roboto-Regular\163.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\164.png">
+      <Link>Assets\Roboto-Regular\164.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\165.png">
+      <Link>Assets\Roboto-Regular\165.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\166.png">
+      <Link>Assets\Roboto-Regular\166.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\167.png">
+      <Link>Assets\Roboto-Regular\167.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\168.png">
+      <Link>Assets\Roboto-Regular\168.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\169.png">
+      <Link>Assets\Roboto-Regular\169.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\17.png">
+      <Link>Assets\Roboto-Regular\17.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\170.png">
+      <Link>Assets\Roboto-Regular\170.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\171.png">
+      <Link>Assets\Roboto-Regular\171.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\172.png">
+      <Link>Assets\Roboto-Regular\172.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\173.png">
+      <Link>Assets\Roboto-Regular\173.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\174.png">
+      <Link>Assets\Roboto-Regular\174.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\175.png">
+      <Link>Assets\Roboto-Regular\175.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\176.png">
+      <Link>Assets\Roboto-Regular\176.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\177.png">
+      <Link>Assets\Roboto-Regular\177.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\178.png">
+      <Link>Assets\Roboto-Regular\178.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\179.png">
+      <Link>Assets\Roboto-Regular\179.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\18.png">
+      <Link>Assets\Roboto-Regular\18.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\180.png">
+      <Link>Assets\Roboto-Regular\180.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\181.png">
+      <Link>Assets\Roboto-Regular\181.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\182.png">
+      <Link>Assets\Roboto-Regular\182.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\183.png">
+      <Link>Assets\Roboto-Regular\183.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\184.png">
+      <Link>Assets\Roboto-Regular\184.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\185.png">
+      <Link>Assets\Roboto-Regular\185.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\186.png">
+      <Link>Assets\Roboto-Regular\186.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\187.png">
+      <Link>Assets\Roboto-Regular\187.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\188.png">
+      <Link>Assets\Roboto-Regular\188.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\189.png">
+      <Link>Assets\Roboto-Regular\189.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\19.png">
+      <Link>Assets\Roboto-Regular\19.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\190.png">
+      <Link>Assets\Roboto-Regular\190.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\191.png">
+      <Link>Assets\Roboto-Regular\191.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\192.png">
+      <Link>Assets\Roboto-Regular\192.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\193.png">
+      <Link>Assets\Roboto-Regular\193.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\194.png">
+      <Link>Assets\Roboto-Regular\194.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\195.png">
+      <Link>Assets\Roboto-Regular\195.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\196.png">
+      <Link>Assets\Roboto-Regular\196.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\197.png">
+      <Link>Assets\Roboto-Regular\197.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\198.png">
+      <Link>Assets\Roboto-Regular\198.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\199.png">
+      <Link>Assets\Roboto-Regular\199.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\2.png">
+      <Link>Assets\Roboto-Regular\2.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\20.png">
+      <Link>Assets\Roboto-Regular\20.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\200.png">
+      <Link>Assets\Roboto-Regular\200.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\201.png">
+      <Link>Assets\Roboto-Regular\201.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\202.png">
+      <Link>Assets\Roboto-Regular\202.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\203.png">
+      <Link>Assets\Roboto-Regular\203.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\204.png">
+      <Link>Assets\Roboto-Regular\204.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\205.png">
+      <Link>Assets\Roboto-Regular\205.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\206.png">
+      <Link>Assets\Roboto-Regular\206.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\207.png">
+      <Link>Assets\Roboto-Regular\207.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\208.png">
+      <Link>Assets\Roboto-Regular\208.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\209.png">
+      <Link>Assets\Roboto-Regular\209.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\21.png">
+      <Link>Assets\Roboto-Regular\21.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\210.png">
+      <Link>Assets\Roboto-Regular\210.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\211.png">
+      <Link>Assets\Roboto-Regular\211.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\212.png">
+      <Link>Assets\Roboto-Regular\212.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\213.png">
+      <Link>Assets\Roboto-Regular\213.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\214.png">
+      <Link>Assets\Roboto-Regular\214.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\215.png">
+      <Link>Assets\Roboto-Regular\215.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\216.png">
+      <Link>Assets\Roboto-Regular\216.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\217.png">
+      <Link>Assets\Roboto-Regular\217.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\218.png">
+      <Link>Assets\Roboto-Regular\218.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\219.png">
+      <Link>Assets\Roboto-Regular\219.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\22.png">
+      <Link>Assets\Roboto-Regular\22.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\220.png">
+      <Link>Assets\Roboto-Regular\220.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\221.png">
+      <Link>Assets\Roboto-Regular\221.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\222.png">
+      <Link>Assets\Roboto-Regular\222.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\223.png">
+      <Link>Assets\Roboto-Regular\223.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\224.png">
+      <Link>Assets\Roboto-Regular\224.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\225.png">
+      <Link>Assets\Roboto-Regular\225.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\226.png">
+      <Link>Assets\Roboto-Regular\226.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\227.png">
+      <Link>Assets\Roboto-Regular\227.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\228.png">
+      <Link>Assets\Roboto-Regular\228.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\229.png">
+      <Link>Assets\Roboto-Regular\229.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\23.png">
+      <Link>Assets\Roboto-Regular\23.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\230.png">
+      <Link>Assets\Roboto-Regular\230.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\231.png">
+      <Link>Assets\Roboto-Regular\231.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\232.png">
+      <Link>Assets\Roboto-Regular\232.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\233.png">
+      <Link>Assets\Roboto-Regular\233.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\234.png">
+      <Link>Assets\Roboto-Regular\234.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\235.png">
+      <Link>Assets\Roboto-Regular\235.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\236.png">
+      <Link>Assets\Roboto-Regular\236.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\237.png">
+      <Link>Assets\Roboto-Regular\237.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\238.png">
+      <Link>Assets\Roboto-Regular\238.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\239.png">
+      <Link>Assets\Roboto-Regular\239.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\24.png">
+      <Link>Assets\Roboto-Regular\24.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\240.png">
+      <Link>Assets\Roboto-Regular\240.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\241.png">
+      <Link>Assets\Roboto-Regular\241.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\242.png">
+      <Link>Assets\Roboto-Regular\242.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\243.png">
+      <Link>Assets\Roboto-Regular\243.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\244.png">
+      <Link>Assets\Roboto-Regular\244.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\245.png">
+      <Link>Assets\Roboto-Regular\245.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\246.png">
+      <Link>Assets\Roboto-Regular\246.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\247.png">
+      <Link>Assets\Roboto-Regular\247.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\248.png">
+      <Link>Assets\Roboto-Regular\248.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\249.png">
+      <Link>Assets\Roboto-Regular\249.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\25.png">
+      <Link>Assets\Roboto-Regular\25.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\250.png">
+      <Link>Assets\Roboto-Regular\250.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\251.png">
+      <Link>Assets\Roboto-Regular\251.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\252.png">
+      <Link>Assets\Roboto-Regular\252.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\253.png">
+      <Link>Assets\Roboto-Regular\253.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\254.png">
+      <Link>Assets\Roboto-Regular\254.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\255.png">
+      <Link>Assets\Roboto-Regular\255.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\26.png">
+      <Link>Assets\Roboto-Regular\26.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\27.png">
+      <Link>Assets\Roboto-Regular\27.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\28.png">
+      <Link>Assets\Roboto-Regular\28.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\29.png">
+      <Link>Assets\Roboto-Regular\29.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\3.png">
+      <Link>Assets\Roboto-Regular\3.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\30.png">
+      <Link>Assets\Roboto-Regular\30.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\31.png">
+      <Link>Assets\Roboto-Regular\31.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\32.png">
+      <Link>Assets\Roboto-Regular\32.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\33.png">
+      <Link>Assets\Roboto-Regular\33.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\34.png">
+      <Link>Assets\Roboto-Regular\34.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\35.png">
+      <Link>Assets\Roboto-Regular\35.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\36.png">
+      <Link>Assets\Roboto-Regular\36.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\37.png">
+      <Link>Assets\Roboto-Regular\37.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\38.png">
+      <Link>Assets\Roboto-Regular\38.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\39.png">
+      <Link>Assets\Roboto-Regular\39.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\4.png">
+      <Link>Assets\Roboto-Regular\4.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\40.png">
+      <Link>Assets\Roboto-Regular\40.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\41.png">
+      <Link>Assets\Roboto-Regular\41.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\42.png">
+      <Link>Assets\Roboto-Regular\42.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\43.png">
+      <Link>Assets\Roboto-Regular\43.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\44.png">
+      <Link>Assets\Roboto-Regular\44.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\45.png">
+      <Link>Assets\Roboto-Regular\45.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\46.png">
+      <Link>Assets\Roboto-Regular\46.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\47.png">
+      <Link>Assets\Roboto-Regular\47.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\48.png">
+      <Link>Assets\Roboto-Regular\48.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\49.png">
+      <Link>Assets\Roboto-Regular\49.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\5.png">
+      <Link>Assets\Roboto-Regular\5.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\50.png">
+      <Link>Assets\Roboto-Regular\50.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\51.png">
+      <Link>Assets\Roboto-Regular\51.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\52.png">
+      <Link>Assets\Roboto-Regular\52.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\53.png">
+      <Link>Assets\Roboto-Regular\53.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\54.png">
+      <Link>Assets\Roboto-Regular\54.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\55.png">
+      <Link>Assets\Roboto-Regular\55.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\56.png">
+      <Link>Assets\Roboto-Regular\56.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\57.png">
+      <Link>Assets\Roboto-Regular\57.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\58.png">
+      <Link>Assets\Roboto-Regular\58.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\59.png">
+      <Link>Assets\Roboto-Regular\59.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\6.png">
+      <Link>Assets\Roboto-Regular\6.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\60.png">
+      <Link>Assets\Roboto-Regular\60.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\61.png">
+      <Link>Assets\Roboto-Regular\61.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\62.png">
+      <Link>Assets\Roboto-Regular\62.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\63.png">
+      <Link>Assets\Roboto-Regular\63.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\65.png">
+      <Link>Assets\Roboto-Regular\65.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\66.png">
+      <Link>Assets\Roboto-Regular\66.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\67.png">
+      <Link>Assets\Roboto-Regular\67.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\68.png">
+      <Link>Assets\Roboto-Regular\68.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\69.png">
+      <Link>Assets\Roboto-Regular\69.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\7.png">
+      <Link>Assets\Roboto-Regular\7.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\70.png">
+      <Link>Assets\Roboto-Regular\70.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\71.png">
+      <Link>Assets\Roboto-Regular\71.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\72.png">
+      <Link>Assets\Roboto-Regular\72.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\73.png">
+      <Link>Assets\Roboto-Regular\73.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\74.png">
+      <Link>Assets\Roboto-Regular\74.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\75.png">
+      <Link>Assets\Roboto-Regular\75.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\76.png">
+      <Link>Assets\Roboto-Regular\76.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\77.png">
+      <Link>Assets\Roboto-Regular\77.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\78.png">
+      <Link>Assets\Roboto-Regular\78.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\79.png">
+      <Link>Assets\Roboto-Regular\79.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\8.png">
+      <Link>Assets\Roboto-Regular\8.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\80.png">
+      <Link>Assets\Roboto-Regular\80.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\81.png">
+      <Link>Assets\Roboto-Regular\81.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\82.png">
+      <Link>Assets\Roboto-Regular\82.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\83.png">
+      <Link>Assets\Roboto-Regular\83.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\84.png">
+      <Link>Assets\Roboto-Regular\84.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\85.png">
+      <Link>Assets\Roboto-Regular\85.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\86.png">
+      <Link>Assets\Roboto-Regular\86.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\87.png">
+      <Link>Assets\Roboto-Regular\87.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\88.png">
+      <Link>Assets\Roboto-Regular\88.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\89.png">
+      <Link>Assets\Roboto-Regular\89.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\9.png">
+      <Link>Assets\Roboto-Regular\9.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\90.png">
+      <Link>Assets\Roboto-Regular\90.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\91.png">
+      <Link>Assets\Roboto-Regular\91.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\93.png">
+      <Link>Assets\Roboto-Regular\93.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\94.png">
+      <Link>Assets\Roboto-Regular\94.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\95.png">
+      <Link>Assets\Roboto-Regular\95.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\96.png">
+      <Link>Assets\Roboto-Regular\96.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\97.png">
+      <Link>Assets\Roboto-Regular\97.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\98.png">
+      <Link>Assets\Roboto-Regular\98.png</Link>
+    </BundleResource>
+    <BundleResource Include="..\fonts\Roboto-Regular\99.png">
+      <Link>Assets\Roboto-Regular\99.png</Link>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Roboto-Regular\" />
   </ItemGroup>
 </Project>

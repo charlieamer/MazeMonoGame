@@ -100,7 +100,7 @@ namespace SpaceMaze
 			checkedPoints += points.Count;
 			bounds = obj.bounds;
 			foreach (var point in points) {
-				if (point.X > bounds.Left && point.X < bounds.Right && point.Y > bounds.Top && point.Y < bounds.Bottom)
+				if (bounds.Contains(point))
 					return true;
 			}
 			return false;

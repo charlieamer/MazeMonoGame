@@ -19,9 +19,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)SpaceGame.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Properties\AssemblyInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GuiObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MainMenuScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImageFont.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Info.plist" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\font.spritefont" />
+    <None Include="$(MSBuildThisFileDirectory)Assets\Font.xnb" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="$(MSBuildThisFileDirectory)Assets\cursor.png" />

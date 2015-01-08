@@ -83,10 +83,10 @@ namespace SpaceMaze
 		{
 
 			graphics = new GraphicsDeviceManager (this);
-			
+
 			Content.RootDirectory = "Assets";
 
-			graphics.IsFullScreen = true;
+			graphics.IsFullScreen = false;
 			graphics.SupportedOrientations = DisplayOrientation.LandscapeLeft | DisplayOrientation.LandscapeRight;
 			graphics.ApplyChanges ();
 
@@ -115,7 +115,7 @@ namespace SpaceMaze
 			gameSize = physicalSize;
 
 			spriteBatch = new SpriteBatch (graphics.GraphicsDevice);
-			currentScreen = new GameScreen ();
+			currentScreen = new MainMenuScreen ();
 			currentScreen.LoadContent ();
 			currentScreen.OnTouchMove (Mouse.GetState ().Position);
 		}

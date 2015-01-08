@@ -68,6 +68,119 @@ namespace SpaceMaze
 		public static Texture2D CreateRectangle(int width, int height) {
 			return CreateRectangle (width, height, Color.White);
 		}
+
+		public static Texture2D TextToTexture(String text, SpriteFont font, Color color) {
+			Vector2 size = font.MeasureString (text) + new Vector2 (0.5f);
+			int width = (int)size.X;
+			int height = (int)size.Y;
+
+			// Create a temporary render target and draw the font on it.
+			GraphicsDevice device = SpaceGame.singleton.GraphicsDevice;
+			RenderTarget2D target = new RenderTarget2D (device, width, height);
+			device.SetRenderTarget (target);
+			device.Clear (Color.Black);
+
+			SpriteBatch spriteBatch = new SpriteBatch (device);
+			spriteBatch.Begin ();
+			spriteBatch.DrawString (font, text, Vector2.Zero, color);
+			spriteBatch.End ();
+
+			device.SetRenderTarget (null);   // unset the render target
+
+			// read back the pixels from the render target
+			Color[] data = new Color[width * height];
+			target.GetData (data);
+			target.Dispose ();
+
+			Texture2D ret = new Texture2D (device, width, height);
+			ret.SetData (data);
+			return ret;
+		}
+
+		public static Texture2D TextToTexture(String text, SpriteFont font) {
+			return TextToTexture (text, font, Color.White);
+		}
+
+		public static Texture2D ScaleTexture(Texture2D old, int width, int height) {
+			if (width <= 1)
+				width = 1;
+			if (height <= 1)
+				height = 1;
+			GraphicsDevice device = SpaceGame.singleton.GraphicsDevice;
+			RenderTarget2D target = new RenderTarget2D (device, width, height);
+			device.SetRenderTarget (target);
+			device.Clear (Color.Transparent);
+
+			SpriteBatch spriteBatch = new SpriteBatch (device);
+			spriteBatch.Begin ();
+			spriteBatch.Draw (old, new Vector2 (0, 0), scale: new Vector2 ((float)width / (float)old.Width, (float)height / (float)old.Height));
+			spriteBatch.End ();
+
+			device.SetRenderTarget (null);   // unset the render target
+
+			// read back the pixels from the render target
+			Color[] data = new Color[width * height];
+			target.GetData (data);
+			target.Dispose ();
+
+			Texture2D ret = new Texture2D (device, width, height);
+			ret.SetData (data);
+			return ret;
+		}
+
+		public static Texture2D ScaleTexture(Texture2D old, float scale) {
+			return ScaleTexture (old, (int)(scale * old.Width), (int)(scale * old.Height));
+		}
+
+		public static Rectangle RectangleUnion(Rectangle[] rectangles) {
+			Rectangle ret = new Rectangle (0, 0, 0, 0);
+			foreach (var rectangle in rectangles) {
+				ret = Rectangle.Union(rectangle, ret);
+			}
+			return ret;
+		}
+
+		public static Texture2D MergeTextures(Texture2D[] textures, Point[] offsets) {
+			Rectangle[] rectangles = new Rectangle[textures.Length];
+			for (int i = 0; i < textures.Length; i++) {
+				rectangles [i] = new Rectangle (offsets [i].X, offsets [i].Y, textures [i].Width, textures [i].Height);
+			}
+			Rectangle union = RectangleUnion (rectangles);
+			Texture2D ret = new Texture2D (SpaceGame.singleton.GraphicsDevice, union.Width, union.Height);
+			Color[] colors = new Color[ret.Width * ret.Height];
+			for (int i = 0; i < colors.Length; i++)
+				colors [i] = Color.TransparentBlack;
+			for (int i = 0; i < textures.Length; i++) {
+				Color[] data = new Color[textures [i].Width * textures [i].Height];
+				textures [i].GetData<Color> (data);
+				for (int x = 0; x < textures [i].Width; x++) {
+					for (int y = 0; y < textures [i].Height; y++) {
+						int i1 = x + offsets [i].X + ret.Width * (y + offsets [i].Y);
+						int i2 = x + y * textures [i].Width;
+						Vector4 a = colors [i1].ToVector4 ();
+						Vector4 b = data [i2].ToVector4 ();
+						Vector4 c = new Vector4 ();
+						c.W = a.W + b.W * (1 - a.W);
+						c.X = (a.X * a.W + b.X * b.W * (1 - a.W)) / c.W;
+						c.Y = (a.Y * a.W + b.Y * b.W * (1 - a.W)) / c.W;
+						c.Z = (a.Z * a.W + b.Z * b.W * (1 - a.W)) / c.W;
+						colors [i1] = new Color (c);
+					}
+				}
+			}
+			ret.SetData<Color> (colors);
+			return ret;
+		}
+
+		public static Texture2D MergeTextures(Texture2D bottom, Point bottomOffset, Texture2D top, Point topOffset) {
+			Texture2D[] textures = new Texture2D[] { bottom, top };
+			Point[] points = new Point[] { bottomOffset, topOffset };
+			return MergeTextures (textures, points);
+		}
+
+		public static Texture2D MergeTextures(Texture2D bottom, Texture2D top) {
+			return MergeTextures (bottom, new Point (), top, new Point ());
+		}
 	}
 }
 

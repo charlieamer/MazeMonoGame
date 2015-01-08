@@ -19,6 +19,8 @@ namespace SpaceMaze
 	{
 		protected bool isMouseDown;
 		protected Vector2 screenMousePosition;
+		protected Vector2 physicalScreenSize;
+		protected Vector2 scaledScreenSize;
 		protected Vector2 worldMousePosition {
 			get {
 				return Vector2.Transform (screenMousePosition, Matrix.Invert (SpaceGame.singleton.matrix));
@@ -29,6 +31,8 @@ namespace SpaceMaze
 		public Screen() : base()
 		{
 			InitMouse ();
+			physicalScreenSize = SpaceGame.singleton.physicalSize;
+			scaledScreenSize = SpaceGame.singleton.gameSize;
 		}
 		public virtual void OnTouch(Point position)
 		{
