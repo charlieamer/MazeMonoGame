@@ -15,10 +15,10 @@ using Microsoft.Xna.Framework.Media;
 
 namespace SpaceMaze
 {
-	class Drawable
+	public class Drawable
 	{
 		protected SpriteBatch spriteBatch;
-		List<Drawable> children;
+		protected List<Drawable> children;
 		bool contentLoaded;
 		public bool isUnscaled { get; set; }
 
@@ -48,27 +48,15 @@ namespace SpaceMaze
 		public virtual void Draw ()
 		{
 			foreach (Drawable child in children) {
-				if (!child.isUnscaled)
-					child.Draw ();
+				child.Draw ();
 			}
 		}
 
 		public virtual void DrawUnscaled()
 		{
 			foreach (Drawable child in children) {
-				if (child.isUnscaled)
-					child.Draw ();
+				child.DrawUnscaled ();
 			}
-		}
-
-		protected Texture2D LoadTexture(String name)
-		{
-			return SpaceGame.singleton.Content.Load<Texture2D> (name);
-		}
-
-		protected SpriteFont LoadFont(String name)
-		{
-			return SpaceGame.singleton.Content.Load<SpriteFont> (name);
 		}
 
 		protected void AppendChild(Drawable child) {
@@ -79,6 +67,8 @@ namespace SpaceMaze
 
 		protected void PrependChild(Drawable child) {
 			children.Insert (0, child);
+			if (contentLoaded)
+				child.LoadContent ();
 		}
 
 		protected void RemoveChild(Drawable child) {

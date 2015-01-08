@@ -115,9 +115,7 @@ namespace SpaceMaze
 			gameSize = physicalSize;
 
 			spriteBatch = new SpriteBatch (graphics.GraphicsDevice);
-			currentScreen = new MainMenuScreen ();
-			currentScreen.LoadContent ();
-			currentScreen.OnTouchMove (Mouse.GetState ().Position);
+			ChangeScreen (new MainMenuScreen ());
 		}
 
 		#endregion
@@ -188,6 +186,10 @@ namespace SpaceMaze
 			//System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch ();
 			//sw.Start ();
 			base.Update (gameTime);
+			if (GraphicsDevice.Viewport.Width != physicalSize.X || GraphicsDevice.Viewport.Height != physicalSize.Y) {
+				physicalSize = new Vector2 (GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
+				gameSize = _gameSize;
+			}
 			UpdateInput ();
 			UpdateScreen (gameTime);
 			//Console.WriteLine ("Update: " + sw.ElapsedMilliseconds);
@@ -210,10 +212,6 @@ namespace SpaceMaze
 				graphics.ApplyChanges ();
 			}
 			*/
-			if (GraphicsDevice.Viewport.Width != physicalSize.X || GraphicsDevice.Viewport.Height != physicalSize.Y) {
-				physicalSize = new Vector2 (GraphicsDevice.Viewport.Width, GraphicsDevice.Viewport.Height);
-				gameSize = _gameSize;
-			}
 			/* Console.WriteLine (physicalSize.X + "x" + physicalSize.Y + " - " +
 				GraphicsDevice.Viewport.Width + "x" + GraphicsDevice.Viewport.Height + " - " +
 				graphics.PreferredBackBufferWidth + "x" + graphics.PreferredBackBufferHeight); */
@@ -228,6 +226,12 @@ namespace SpaceMaze
 			spriteBatch.End ();
 
 			//Console.WriteLine ("Draw: " + sw.ElapsedMilliseconds);
+		}
+
+		public void ChangeScreen(Screen newScreen) {
+			currentScreen = newScreen;
+			currentScreen.LoadContent ();
+			currentScreen.OnTouchMove (Mouse.GetState ().Position);
 		}
 
 		#endregion

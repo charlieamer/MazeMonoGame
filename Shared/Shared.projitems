@@ -22,11 +22,11 @@
     <Compile Include="$(MSBuildThisFileDirectory)GuiObject.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainMenuScreen.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ImageFont.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gui.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)GuiListener.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Info.plist" />
-    <None Include="$(MSBuildThisFileDirectory)Assets\font.spritefont" />
-    <None Include="$(MSBuildThisFileDirectory)Assets\Font.xnb" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="$(MSBuildThisFileDirectory)Assets\cursor.png" />

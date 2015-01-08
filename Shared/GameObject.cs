@@ -15,7 +15,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace SpaceMaze
 {
-	class GameObject : Drawable
+	public class GameObject : Drawable
 	{
 		#region properties
 		public Vector2 position { get; set; }
@@ -52,7 +52,7 @@ namespace SpaceMaze
 			base.LoadContent ();
 			if (texture == null) {
 				try {
-					texture = LoadTexture (textureLoadLocation);
+					texture = Utils.LoadTexture (textureLoadLocation);
 				} catch (Exception ex) {
 					Console.Error.WriteLine ("Error loading texture: " + textureLoadLocation);
 					Console.Error.WriteLine ("Error was: " + ex.Message);
@@ -66,7 +66,13 @@ namespace SpaceMaze
 		public override void Draw ()
 		{
 			base.Draw ();
-			if (texture != null)
+			if (texture != null && !isUnscaled)
+				spriteBatch.Draw (texture, position - center, scale: scale, rotation: rotation);
+		}
+		public override void DrawUnscaled ()
+		{
+			base.DrawUnscaled ();
+			if (texture != null && isUnscaled)
 				spriteBatch.Draw (texture, position - center, scale: scale, rotation: rotation);
 		}
 		#endregion

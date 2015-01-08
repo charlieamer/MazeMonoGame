@@ -73,15 +73,9 @@
     <Reference Include="MonoGame.Framework.Net">
       <HintPath>..\Dependencies\MacOS\MonoGame.Framework.Net.dll</HintPath>
     </Reference>
-    <Reference Include="MonoGame.Framework.Content.Pipeline">
-      <HintPath>..\Dependencies\MacOS\MonoGame.Framework.Content.Pipeline.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
-    <None Include="..\Shared\Assets\Font.xnb">
-      <Link>Assets\Font.xnb</Link>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
@@ -97,9 +91,6 @@
     </BundleResource>
     <BundleResource Include="..\Shared\Assets\logo.png">
       <Link>Assets\logo.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\1.png">
-      <Link>Assets\Roboto-Regular\1.png</Link>
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\10.png">
       <Link>Assets\Roboto-Regular\10.png</Link>
@@ -233,9 +224,6 @@
     <BundleResource Include="..\fonts\Roboto-Regular\139.png">
       <Link>Assets\Roboto-Regular\139.png</Link>
     </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\14.png">
-      <Link>Assets\Roboto-Regular\14.png</Link>
-    </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\140.png">
       <Link>Assets\Roboto-Regular\140.png</Link>
     </BundleResource>
@@ -265,9 +253,6 @@
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\149.png">
       <Link>Assets\Roboto-Regular\149.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\15.png">
-      <Link>Assets\Roboto-Regular\15.png</Link>
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\150.png">
       <Link>Assets\Roboto-Regular\150.png</Link>
@@ -299,9 +284,6 @@
     <BundleResource Include="..\fonts\Roboto-Regular\159.png">
       <Link>Assets\Roboto-Regular\159.png</Link>
     </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\16.png">
-      <Link>Assets\Roboto-Regular\16.png</Link>
-    </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\160.png">
       <Link>Assets\Roboto-Regular\160.png</Link>
     </BundleResource>
@@ -331,9 +313,6 @@
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\169.png">
       <Link>Assets\Roboto-Regular\169.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\17.png">
-      <Link>Assets\Roboto-Regular\17.png</Link>
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\170.png">
       <Link>Assets\Roboto-Regular\170.png</Link>
@@ -365,9 +344,6 @@
     <BundleResource Include="..\fonts\Roboto-Regular\179.png">
       <Link>Assets\Roboto-Regular\179.png</Link>
     </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\18.png">
-      <Link>Assets\Roboto-Regular\18.png</Link>
-    </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\180.png">
       <Link>Assets\Roboto-Regular\180.png</Link>
     </BundleResource>
@@ -397,9 +373,6 @@
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\189.png">
       <Link>Assets\Roboto-Regular\189.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\19.png">
-      <Link>Assets\Roboto-Regular\19.png</Link>
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\190.png">
       <Link>Assets\Roboto-Regular\190.png</Link>
@@ -431,12 +404,6 @@
     <BundleResource Include="..\fonts\Roboto-Regular\199.png">
       <Link>Assets\Roboto-Regular\199.png</Link>
     </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\2.png">
-      <Link>Assets\Roboto-Regular\2.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\20.png">
-      <Link>Assets\Roboto-Regular\20.png</Link>
-    </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\200.png">
       <Link>Assets\Roboto-Regular\200.png</Link>
     </BundleResource>
@@ -466,9 +433,6 @@
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\209.png">
       <Link>Assets\Roboto-Regular\209.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\21.png">
-      <Link>Assets\Roboto-Regular\21.png</Link>
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\210.png">
       <Link>Assets\Roboto-Regular\210.png</Link>
@@ -500,9 +464,6 @@
     <BundleResource Include="..\fonts\Roboto-Regular\219.png">
       <Link>Assets\Roboto-Regular\219.png</Link>
     </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\22.png">
-      <Link>Assets\Roboto-Regular\22.png</Link>
-    </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\220.png">
       <Link>Assets\Roboto-Regular\220.png</Link>
     </BundleResource>
@@ -532,9 +493,6 @@
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\229.png">
       <Link>Assets\Roboto-Regular\229.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\23.png">
-      <Link>Assets\Roboto-Regular\23.png</Link>
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\230.png">
       <Link>Assets\Roboto-Regular\230.png</Link>
@@ -566,9 +524,6 @@
     <BundleResource Include="..\fonts\Roboto-Regular\239.png">
       <Link>Assets\Roboto-Regular\239.png</Link>
     </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\24.png">
-      <Link>Assets\Roboto-Regular\24.png</Link>
-    </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\240.png">
       <Link>Assets\Roboto-Regular\240.png</Link>
     </BundleResource>
@@ -599,9 +554,6 @@
     <BundleResource Include="..\fonts\Roboto-Regular\249.png">
       <Link>Assets\Roboto-Regular\249.png</Link>
     </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\25.png">
-      <Link>Assets\Roboto-Regular\25.png</Link>
-    </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\250.png">
       <Link>Assets\Roboto-Regular\250.png</Link>
     </BundleResource>
@@ -619,27 +571,6 @@
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\255.png">
       <Link>Assets\Roboto-Regular\255.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\26.png">
-      <Link>Assets\Roboto-Regular\26.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\27.png">
-      <Link>Assets\Roboto-Regular\27.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\28.png">
-      <Link>Assets\Roboto-Regular\28.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\29.png">
-      <Link>Assets\Roboto-Regular\29.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\3.png">
-      <Link>Assets\Roboto-Regular\3.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\30.png">
-      <Link>Assets\Roboto-Regular\30.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\31.png">
-      <Link>Assets\Roboto-Regular\31.png</Link>
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\32.png">
       <Link>Assets\Roboto-Regular\32.png</Link>
@@ -664,9 +595,6 @@
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\39.png">
       <Link>Assets\Roboto-Regular\39.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\4.png">
-      <Link>Assets\Roboto-Regular\4.png</Link>
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\40.png">
       <Link>Assets\Roboto-Regular\40.png</Link>
@@ -698,9 +626,6 @@
     <BundleResource Include="..\fonts\Roboto-Regular\49.png">
       <Link>Assets\Roboto-Regular\49.png</Link>
     </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\5.png">
-      <Link>Assets\Roboto-Regular\5.png</Link>
-    </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\50.png">
       <Link>Assets\Roboto-Regular\50.png</Link>
     </BundleResource>
@@ -731,9 +656,6 @@
     <BundleResource Include="..\fonts\Roboto-Regular\59.png">
       <Link>Assets\Roboto-Regular\59.png</Link>
     </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\6.png">
-      <Link>Assets\Roboto-Regular\6.png</Link>
-    </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\60.png">
       <Link>Assets\Roboto-Regular\60.png</Link>
     </BundleResource>
@@ -760,9 +682,6 @@
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\69.png">
       <Link>Assets\Roboto-Regular\69.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\7.png">
-      <Link>Assets\Roboto-Regular\7.png</Link>
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\70.png">
       <Link>Assets\Roboto-Regular\70.png</Link>
@@ -793,9 +712,6 @@
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\79.png">
       <Link>Assets\Roboto-Regular\79.png</Link>
-    </BundleResource>
-    <BundleResource Include="..\fonts\Roboto-Regular\8.png">
-      <Link>Assets\Roboto-Regular\8.png</Link>
     </BundleResource>
     <BundleResource Include="..\fonts\Roboto-Regular\80.png">
       <Link>Assets\Roboto-Regular\80.png</Link>

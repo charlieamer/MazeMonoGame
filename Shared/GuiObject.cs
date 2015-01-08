@@ -15,21 +15,37 @@ using Microsoft.Xna.Framework.Media;
 
 namespace SpaceMaze
 {
-	class GuiObject : GameObject
+	public class GuiObject : GameObject, GuiListener
 	{
 		ImageFont font;
-		public GuiObject (Texture2D tex) : base(tex) {}
-		public GuiObject (String textureLocation) : base(textureLocation) {}
-		public GuiObject (String text, SpriteFont font) : base() {
-			texture = Utils.TextToTexture (text, font);
-		}
-		public GuiObject (String text, SpriteFont font, Color color) : base() {
-			texture = Utils.TextToTexture (text, font, color);
-		}
+		public String id { get; protected set; }
 		public GuiObject (String text, String fontName, Color color, float size = 50.0f) : base() {
-			font = new ImageFont (fontName);
+			font = ImageFont.Load (fontName);
 			texture = font.WriteText (text, size);
+			isUnscaled = true;
+			id = text;
 		}
+		public GuiObject(String text, String fontName, float size = 50.0f) : this(text, fontName, Color.White, size) {
+		}
+
+		public bool selected { get; protected set; }
+
+		#region GuiListener implementation
+		public bool OnMouseDown (GuiObject obj, Vector2 p)
+		{
+			selected = true;
+			return false;
+		}
+		public bool OnMouseMove (GuiObject obj, Vector2 p)
+		{
+			return false;
+		}
+		public bool OnMouseUp (GuiObject obj, Vector2 p)
+		{
+			selected = false;
+			return false;
+		}
+		#endregion
 	}
 }
 

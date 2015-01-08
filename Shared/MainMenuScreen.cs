@@ -19,9 +19,16 @@ namespace SpaceMaze
 	{
 		public MainMenuScreen() : base() {
 			GuiObject newGame = new GuiObject ("New Game", "Roboto-Regular", Color.White);
-			PrependChild (newGame);
-			newGame.position = new Vector2 (physicalScreenSize.X / 2, 50);
-			newGame.isUnscaled = true;
+			gui.AddObject (newGame);
+			newGame.position = new Vector2 (physicalScreenSize.X / 2, 100);
+		}
+
+		public override bool OnMouseDown (GuiObject obj, Vector2 p)
+		{
+			base.OnMouseDown (obj, p);
+			if (obj.id == "New Game")
+				SpaceGame.singleton.ChangeScreen (new GameScreen ());
+			return true;
 		}
 	}
 }

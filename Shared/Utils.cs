@@ -181,6 +181,15 @@ namespace SpaceMaze
 		public static Texture2D MergeTextures(Texture2D bottom, Texture2D top) {
 			return MergeTextures (bottom, new Point (), top, new Point ());
 		}
+
+		public static Texture2D LoadTexture(String name)
+		{
+			System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch ();
+			sw.Start ();
+			Texture2D ret = SpaceGame.singleton.Content.Load<Texture2D> (name);
+			Console.WriteLine ("Loaded " + name + " image in " + sw.ElapsedMilliseconds + "ms");
+			return ret;
+		}
 	}
 }
 

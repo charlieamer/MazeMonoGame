@@ -23,7 +23,7 @@ namespace SpaceMaze
 		public Maze (Texture2D directTexture) : base (directTexture) {}
 		private Color[] colors;
 		int totalPoints, checkedPoints;
-		Rectangle bounds;
+		Rectangle objectBounds;
 
 		//List<Point> collidables;
 		List<Point>[,] octreeCollidables;
@@ -98,19 +98,19 @@ namespace SpaceMaze
 			if (points == null)
 				return false;
 			checkedPoints += points.Count;
-			bounds = obj.bounds;
+			objectBounds = obj.bounds;
 			foreach (var point in points) {
-				if (bounds.Contains(point))
+				if (objectBounds.Contains(point))
 					return true;
 			}
 			return false;
 		}
 		public bool CanCollide(GameObject obj)
 		{
-			bounds = obj.bounds;
+			objectBounds = obj.bounds;
 			checkedPoints = 0;
-			for (int x = bounds.Left; x <= bounds.Right + OCTREE_SIZE; x += OCTREE_SIZE) {
-				for (int y = bounds.Top; y <= bounds.Bottom + OCTREE_SIZE; y += OCTREE_SIZE) {
+			for (int x = objectBounds.Left; x <= objectBounds.Right + OCTREE_SIZE; x += OCTREE_SIZE) {
+				for (int y = objectBounds.Top; y <= objectBounds.Bottom + OCTREE_SIZE; y += OCTREE_SIZE) {
 					if (CanCollide (obj, getOctree (x, y)))
 						return true;
 				}
@@ -130,13 +130,13 @@ namespace SpaceMaze
 				}
 			}
 			Texture2D redRectangle = Utils.CreateRectangle (OCTREE_SIZE, OCTREE_SIZE, Color.Red);
-			for (int x = bounds.Left / OCTREE_SIZE * OCTREE_SIZE; x <= bounds.Right / OCTREE_SIZE * OCTREE_SIZE; x += OCTREE_SIZE) {
-				for (int y = bounds.Top / OCTREE_SIZE * OCTREE_SIZE; y <= bounds.Bottom / OCTREE_SIZE * OCTREE_SIZE; y += OCTREE_SIZE) {
+			for (int x = objectBounds.Left / OCTREE_SIZE * OCTREE_SIZE; x <= objectBounds.Right / OCTREE_SIZE * OCTREE_SIZE; x += OCTREE_SIZE) {
+				for (int y = objectBounds.Top / OCTREE_SIZE * OCTREE_SIZE; y <= objectBounds.Bottom / OCTREE_SIZE * OCTREE_SIZE; y += OCTREE_SIZE) {
 					if (getOctree (x, y) != null)
 						spriteBatch.Draw (redRectangle, new Vector2 (x, y));
 				}
 			}
-			spriteBatch.Draw (Utils.CreateRectangle (bounds.Width, bounds.Height, Color.Green), new Vector2 (bounds.Left, bounds.Top));
+			spriteBatch.Draw (Utils.CreateRectangle (objectBounds.Width, objectBounds.Height, Color.Green), new Vector2 (objectBounds.Left, objectBounds.Top));
 		}
 		#endif
 	}
