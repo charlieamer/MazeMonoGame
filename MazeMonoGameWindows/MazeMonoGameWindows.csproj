@@ -66,9 +66,12 @@
     <Reference Include="SharpDX.XInput">
       <HintPath>..\Dependencies\Windows\SharpDX.XInput.dll</HintPath>
     </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
+    <Compile Include="UtilsWindows.cs" />
   </ItemGroup>
   <Import Project="..\Shared\Shared.projitems" Label="Shared" Condition="Exists('..\Shared\Shared.projitems')" />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -88,5 +91,67 @@
       <Link>Assets\logo.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\fonts\Assets\Roboto-Regular-0.png">
+      <Link>Assets\Roboto-Regular-0.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\fonts\Assets\Roboto-Regular-0.xml">
+      <Link>Assets\Roboto-Regular-0.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\fonts\Assets\Roboto-Regular-1.png">
+      <Link>Assets\Roboto-Regular-1.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\fonts\Assets\Roboto-Regular-1.xml">
+      <Link>Assets\Roboto-Regular-1.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\fonts\Assets\Roboto-Regular-2.png">
+      <Link>Assets\Roboto-Regular-2.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\fonts\Assets\Roboto-Regular-2.xml">
+      <Link>Assets\Roboto-Regular-2.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\fonts\Assets\Roboto-Regular-3.png">
+      <Link>Assets\Roboto-Regular-3.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\fonts\Assets\Roboto-Regular-3.xml">
+      <Link>Assets\Roboto-Regular-3.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\fonts\Assets\Roboto-Regular-4.png">
+      <Link>Assets\Roboto-Regular-4.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\fonts\Assets\Roboto-Regular-4.xml">
+      <Link>Assets\Roboto-Regular-4.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\fonts\Assets\Roboto-Regular-5.png">
+      <Link>Assets\Roboto-Regular-5.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\fonts\Assets\Roboto-Regular-5.xml">
+      <Link>Assets\Roboto-Regular-5.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\fonts\Assets\Roboto-Regular-6.png">
+      <Link>Assets\Roboto-Regular-6.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\fonts\Assets\Roboto-Regular-6.xml">
+      <Link>Assets\Roboto-Regular-6.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="..\fonts\Assets\Roboto-Regular.xml">
+      <Link>Assets\Roboto-Regular.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

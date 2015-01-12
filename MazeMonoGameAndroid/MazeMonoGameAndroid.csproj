@@ -80,21 +80,6 @@
     <AndroidAsset Include="..\Shared\Assets\logo.png">
       <Link>Assets\Assets\logo.png</Link>
     </AndroidAsset>
-    <AndroidAsset Include="..\fonts\Assets\Roboto-Regular.xml">
-      <Link>Assets\Assets\Roboto-Regular.xml</Link>
-    </AndroidAsset>
-    <AndroidAsset Include="..\fonts\Assets\Roboto-Regular-0.png">
-      <Link>Assets\Assets\Roboto-Regular-0.png</Link>
-    </AndroidAsset>
-    <AndroidAsset Include="..\fonts\Assets\Roboto-Regular-0.xml">
-      <Link>Assets\Assets\Roboto-Regular-0.xml</Link>
-    </AndroidAsset>
-    <AndroidAsset Include="..\fonts\Assets\Roboto-Regular-1.png">
-      <Link>Assets\Assets\Roboto-Regular-1.png</Link>
-    </AndroidAsset>
-    <AndroidAsset Include="..\fonts\Assets\Roboto-Regular-1.xml">
-      <Link>Assets\Assets\Roboto-Regular-1.xml</Link>
-    </AndroidAsset>
   </ItemGroup>
   <Import Project="..\Shared\Shared.projitems" Label="Shared" Condition="Exists('..\Shared\Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

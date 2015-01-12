@@ -34,7 +34,7 @@ namespace SpaceMaze
 			if (obj.id == "New")
 				SpaceGame.singleton.ChangeScreen (new EditorScreen ());
 			if (obj.id == "Open") {
-				String str = Utils.OpenFile ();
+				String str = Utils.OpenFile (new string[] {"xml"});
 				if (str != null)
 					SpaceGame.singleton.ChangeScreen (new EditorScreen (str));
 			}
