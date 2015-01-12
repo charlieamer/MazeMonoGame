@@ -190,6 +190,43 @@ namespace SpaceMaze
 			Console.WriteLine ("Loaded " + name + " image in " + sw.ElapsedMilliseconds + "ms");
 			return ret;
 		}
+
+		public static Texture2D CropTexture(Texture2D image, Rectangle target)
+		{
+
+			var graphics = image.GraphicsDevice;
+			var ret = new RenderTarget2D(graphics, target.Width, target.Height);
+			var sb = new SpriteBatch(graphics);
+
+			graphics.SetRenderTarget(ret); // draw to image
+			graphics.Clear(new Color(0, 0, 0, 0));
+
+			sb.Begin();
+			sb.Draw(image, Vector2.Zero, target, Color.White);
+			sb.End();
+
+			graphics.SetRenderTarget(null); // set back to main window
+
+			Texture2D res = (Texture2D)ret;
+			return res;
+
+			/*
+			Color [] colors = new Color[image.Width * image.Height];
+			image.GetData<Color> (colors);
+			return CropTexture (colors, image.Bounds, target);
+			*/
+		}
+		/*
+		public static Texture2D CropTexture(Color[] colors, Rectangle source, Rectangle target) {
+			Texture2D tex = new Texture2D (SpaceGame.singleton.GraphicsDevice, target.Width, target.Height);
+			Color[] ret = new Color[target.Width * target.Height];
+			for (int x = target.Left; x < target.Right; x++)
+				for (int y = target.Top; y < target.Bottom; y++)
+					ret [(x - target.Left) + (y - target.Top) * target.Width] = colors [x + y * source.Width];
+			tex.SetData<Color> (ret);
+			return tex;
+		}
+		*/
 	}
 }
 

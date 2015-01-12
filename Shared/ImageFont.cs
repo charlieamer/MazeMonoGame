@@ -15,7 +15,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace SpaceMaze
 {
-	class ImageFont
+	public class ImageFont
 	{
 		System.Diagnostics.Stopwatch sw;
 
@@ -25,6 +25,8 @@ namespace SpaceMaze
 
 		String loadedFont;
 		SortedDictionary<float, Texture2D[]> scaledCache;
+
+		AtlasCollection atlas;
 
 		public static ImageFont Load(string name) {
 			if (fontCollection == null)
@@ -42,9 +44,10 @@ namespace SpaceMaze
 			fontCollection [name] = this;
 			scaledCache = new SortedDictionary<float, Texture2D[]> ();
 			scaledCache [startSize] = new Texture2D[256];
+			atlas = new AtlasCollection ("Assets/" + name + ".xml");
 			for (int i = 0; i < 256; i++) {
 				try {
-					scaledCache [startSize] [i] = SpaceGame.singleton.Content.Load<Texture2D> (name + "/" + i + ".png");
+					scaledCache [startSize] [i] = atlas[i + ".png"];
 				} catch {
 					scaledCache [startSize] [i] = Utils.CreateRectangle ((int)startSize / 3, (int)startSize);
 				}

@@ -24,6 +24,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)ImageFont.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Gui.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GuiListener.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AtlasCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Info.plist" />
