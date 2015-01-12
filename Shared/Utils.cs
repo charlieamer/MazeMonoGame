@@ -15,7 +15,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace SpaceMaze
 {
-	class Utils
+	public partial class Utils
 	{
 		public static Texture2D CreateCircle(int radius, Color color)
 		{

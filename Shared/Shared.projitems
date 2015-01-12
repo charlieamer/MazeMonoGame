@@ -25,6 +25,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Gui.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GuiListener.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)AtlasCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EditorMenuScreen.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EditorScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Info.plist" />

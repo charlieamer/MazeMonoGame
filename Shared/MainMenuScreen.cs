@@ -15,12 +15,16 @@ using Microsoft.Xna.Framework.Media;
 
 namespace SpaceMaze
 {
-	class MainMenuScreen : Screen
+	public class MainMenuScreen : Screen
 	{
 		public MainMenuScreen() : base() {
-			GuiObject newGame = new GuiObject ("New Game", "Roboto-Regular", 30);
+			GuiObject newGame = new GuiObject ("New Game", "Roboto-Regular", 50);
 			gui.AddObject (newGame);
 			newGame.position = new Vector2 (physicalScreenSize.X / 2, 100);
+
+			GuiObject editor = new GuiObject ("Editor", "Roboto-Regular", 50);
+			gui.AddObject (editor);
+			editor.position = new Vector2 (physicalScreenSize.X / 2, 170);
 		}
 
 		public override bool OnMouseDown (GuiObject obj, Vector2 p)
@@ -28,6 +32,8 @@ namespace SpaceMaze
 			base.OnMouseDown (obj, p);
 			if (obj.id == "New Game")
 				SpaceGame.singleton.ChangeScreen (new GameScreen ());
+			if (obj.id == "Editor")
+				SpaceGame.singleton.ChangeScreen (new EditorMenuScreen ());
 			return true;
 		}
 	}
