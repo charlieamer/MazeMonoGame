@@ -146,30 +146,22 @@ namespace SpaceMaze
 				rectangles [i] = new Rectangle (offsets [i].X, offsets [i].Y, textures [i].Width, textures [i].Height);
 			}
 			Rectangle union = RectangleUnion (rectangles);
-			Texture2D ret = new Texture2D (SpaceGame.singleton.GraphicsDevice, union.Width, union.Height);
-			Color[] colors = new Color[ret.Width * ret.Height];
-			for (int i = 0; i < colors.Length; i++)
-				colors [i] = Color.TransparentBlack;
+			GraphicsDevice device = SpaceGame.singleton.GraphicsDevice;
+			RenderTarget2D target = new RenderTarget2D (device, union.Width, union.Height);
+			device.SetRenderTarget (target);
+			device.Clear (Color.Transparent);
+
+			SpriteBatch spriteBatch = new SpriteBatch (device);
+			spriteBatch.Begin ();
+
 			for (int i = 0; i < textures.Length; i++) {
-				Color[] data = new Color[textures [i].Width * textures [i].Height];
-				textures [i].GetData<Color> (data);
-				for (int x = 0; x < textures [i].Width; x++) {
-					for (int y = 0; y < textures [i].Height; y++) {
-						int i1 = x + offsets [i].X + ret.Width * (y + offsets [i].Y);
-						int i2 = x + y * textures [i].Width;
-						Vector4 a = colors [i1].ToVector4 ();
-						Vector4 b = data [i2].ToVector4 ();
-						Vector4 c = new Vector4 ();
-						c.W = a.W + b.W * (1 - a.W);
-						c.X = (a.X * a.W + b.X * b.W * (1 - a.W)) / c.W;
-						c.Y = (a.Y * a.W + b.Y * b.W * (1 - a.W)) / c.W;
-						c.Z = (a.Z * a.W + b.Z * b.W * (1 - a.W)) / c.W;
-						colors [i1] = new Color (c);
-					}
-				}
+				spriteBatch.Draw (textures [i], new Vector2 (offsets [i].X - union.X, offsets [i].Y - union.Y));
 			}
-			ret.SetData<Color> (colors);
-			return ret;
+
+			spriteBatch.End ();
+
+			device.SetRenderTarget (null);
+			return (Texture2D)target;
 		}
 
 		public static Texture2D MergeTextures(Texture2D bottom, Point bottomOffset, Texture2D top, Point topOffset) {

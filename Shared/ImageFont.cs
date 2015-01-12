@@ -19,7 +19,7 @@ namespace SpaceMaze
 	{
 		System.Diagnostics.Stopwatch sw;
 
-		static float startSize = 50.0f;
+		static float startSize = 100.0f;
 
 		static SortedDictionary<String, ImageFont> fontCollection;
 
@@ -56,27 +56,21 @@ namespace SpaceMaze
 			Console.WriteLine ("Loaded " + name + " font in " + sw.ElapsedMilliseconds + "ms");
 		}
 
-		private void Cache(float size) {
-			sw.Restart ();
-			if (size != startSize) {
+		private Texture2D GetGlyph(char c, float size) {
+			if (!scaledCache.ContainsKey (size))
 				scaledCache [size] = new Texture2D[256];
-				for (int i = 0; i < 256; i++) {
-					scaledCache [size] [i] = Utils.ScaleTexture (scaledCache [startSize] [i], size / startSize);
-				}
-			}
-			sw.Stop ();
-			Console.WriteLine ("Cached " + loadedFont + " font size " + size + " in " + sw.ElapsedMilliseconds + "ms");
+			if (scaledCache [size] [(int)c] == null)
+				scaledCache [size] [(int)c] = Utils.ScaleTexture (scaledCache [startSize] [(int)c], size / startSize);
+			return scaledCache [size] [(int)c];
 		}
 
 		public Texture2D WriteText(string text, float size) {
 			Point position = new Point ();
 			Texture2D[] textures = new Texture2D[text.Length];
 			Point[] offsets = new Point[text.Length];
-			if (!scaledCache.ContainsKey (size))
-				Cache (size);
 			sw.Restart ();
 			for (int i = 0; i < text.Length; i++) {
-				textures[i] = scaledCache [size] [(int)text [i]];
+				textures[i] = GetGlyph(text[i],size);
 				offsets [i] = new Point (position.X, position.Y);
 				position.X += textures [i].Width;
 			}

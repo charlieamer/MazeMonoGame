@@ -92,9 +92,6 @@
     <BundleResource Include="..\Shared\Assets\logo.png">
       <Link>Assets\logo.png</Link>
     </BundleResource>
-    <BundleResource Include="..\fonts\Assets\Roboto-Regular-0.png">
-      <Link>Assets\Roboto-Regular-0.png</Link>
-    </BundleResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\fonts\Assets\Roboto-Regular.xml">
@@ -113,12 +110,48 @@
       <Link>Assets\Roboto-Regular-1.xml</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="..\fonts\Assets\Roboto-Regular-0.png">
+      <Link>Assets\Roboto-Regular-0.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="..\fonts\Assets\Roboto-Regular-2.png">
       <Link>Assets\Roboto-Regular-2.png</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="..\fonts\Assets\Roboto-Regular-2.xml">
       <Link>Assets\Roboto-Regular-2.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\fonts\Assets\Roboto-Regular-3.png">
+      <Link>Assets\Roboto-Regular-3.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\fonts\Assets\Roboto-Regular-3.xml">
+      <Link>Assets\Roboto-Regular-3.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\fonts\Assets\Roboto-Regular-4.png">
+      <Link>Assets\Roboto-Regular-4.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\fonts\Assets\Roboto-Regular-4.xml">
+      <Link>Assets\Roboto-Regular-4.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\fonts\Assets\Roboto-Regular-5.png">
+      <Link>Assets\Roboto-Regular-5.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\fonts\Assets\Roboto-Regular-5.xml">
+      <Link>Assets\Roboto-Regular-5.xml</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\fonts\Assets\Roboto-Regular-6.png">
+      <Link>Assets\Roboto-Regular-6.png</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="..\fonts\Assets\Roboto-Regular-6.xml">
+      <Link>Assets\Roboto-Regular-6.xml</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:79d69caad693501bb15593706b1b5377:28e38b17f82540bf2cd80ad93dca339f:ee1a7c81d0ca15b9f1e705aecbb0265d$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+pX => x pos of the pivot point (relative to sprite width)
+pY => y pos of the pivot point (relative to sprite height)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="Roboto-Regular-5.png" width="510" height="407">
+    <sprite n="101.png" x="163" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="107.png" x="369" y="272" w="47" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="11.png" x="418" y="272" w="47" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="115.png" x="267" y="137" w="49" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="118.png" x="162" y="272" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="12.png" x="418" y="272" w="47" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="120.png" x="214" y="272" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="121.png" x="56" y="137" w="51" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="122.png" x="419" y="137" w="47" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="127.png" x="418" y="272" w="47" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="128.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="129.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="130.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="131.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="132.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="133.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="134.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="135.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="136.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="137.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="138.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="139.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="140.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="141.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="142.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="143.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="144.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="145.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="146.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="147.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="148.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="149.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="150.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="151.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="152.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="153.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="154.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="155.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="156.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="157.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="158.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="159.png" x="215" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="171.png" x="318" y="137" w="49" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="175.png" x="370" y="2" w="48" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="176.png" x="468" y="137" w="39" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="182.png" x="56" y="272" w="51" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="186.png" x="420" y="2" w="48" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="187.png" x="319" y="2" w="49" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="191.png" x="109" y="137" w="51" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="207.png" x="470" y="2" w="37" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="48.png" x="2" y="2" w="52" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="49.png" x="318" y="272" w="49" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="53.png" x="215" y="137" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="54.png" x="2" y="137" w="52" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="60.png" x="266" y="272" w="50" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="61.png" x="110" y="2" w="51" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="63.png" x="418" y="272" w="47" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="69.png" x="109" y="272" w="51" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="70.png" x="162" y="137" w="51" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="9.png" x="418" y="272" w="47" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="94.png" x="467" y="272" w="41" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="95.png" x="369" y="137" w="48" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="97.png" x="2" y="272" w="52" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="98.png" x="56" y="2" w="52" h="133" pX="0.5" pY="0.5"/>
+    <sprite n="99.png" x="267" y="2" w="50" h="133" pX="0.5" pY="0.5"/>
+</TextureAtlas>

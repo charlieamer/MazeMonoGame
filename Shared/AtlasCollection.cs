@@ -45,7 +45,7 @@ namespace SpaceMaze
 					if (reader.Name == "include") {
 						AtlasCollection tmp = new AtlasCollection (reader.GetAttribute ("file"));
 						foreach (KeyValuePair<String, Texture2D> kv in tmp) {
-							Add (kv.Key, kv.Value);
+							this [kv.Key] = kv.Value;
 						}
 						tmp = null;
 					}

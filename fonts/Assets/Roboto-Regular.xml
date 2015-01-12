@@ -2,4 +2,9 @@
 <Includes>
   <include file="Assets/Roboto-Regular-0.xml"/>
   <include file="Assets/Roboto-Regular-1.xml"/>
+  <include file="Assets/Roboto-Regular-2.xml"/>
+  <include file="Assets/Roboto-Regular-3.xml"/>
+  <include file="Assets/Roboto-Regular-4.xml"/>
+  <include file="Assets/Roboto-Regular-5.xml"/>
+  <include file="Assets/Roboto-Regular-6.xml"/>
 </Includes>

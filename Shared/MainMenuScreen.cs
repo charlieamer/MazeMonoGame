@@ -18,7 +18,7 @@ namespace SpaceMaze
 	class MainMenuScreen : Screen
 	{
 		public MainMenuScreen() : base() {
-			GuiObject newGame = new GuiObject ("New Game", "Roboto-Regular", Color.White);
+			GuiObject newGame = new GuiObject ("New Game", "Roboto-Regular", 30);
 			gui.AddObject (newGame);
 			newGame.position = new Vector2 (physicalScreenSize.X / 2, 100);
 		}

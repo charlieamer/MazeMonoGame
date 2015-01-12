@@ -9,7 +9,7 @@ for f in l:
         n = f[:-4]
         os.system("mkdir " + n + " 2>/dev/null")
         for i in range(256):
-            line = "convert -background none -fill white -font " + f + " -pointsize 50 label:$'\\x" + hex(i)[2:] + "' " + n + "/" + str(i) + ".png >/dev/null 2>/dev/null"
+            line = "convert -background none -fill white -font " + f + " -pointsize 100 label:$'\\x" + hex(i)[2:] + "' " + n + "/" + str(i) + ".png >/dev/null 2>/dev/null"
             os.system(line)
             print int((1.0 + i) / 512.0 * 100.0), "%\r",
             sys.stdout.flush();
